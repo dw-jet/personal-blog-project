@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Project for Udacity Front End Developer Nanodegree">
+    <title>Surviving Windows Application Management with Scoop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="container">
+      <nav class="top-nav">
+        <ul>
+          <li class="nav-li"><a class="nav-entry" href="index.html">Home</a></li>
+          <li class="nav-li"><a class="nav-entry" href="scoop.html">Learn Scoop</a></li>
+        </ul>
+      </nav>
+      <article>
+        <header class="article-header">
+            <h1>Surviving Windows Application Management with Scoop</h1>
+        </header>
+        <div class="entry-details">
+          <span>May 18, 2020</span> / <span>Tech</span>
+        </div>
+        <div class="post-content">
+          <p>Getting all of your favorite open source tools installed on Windows is a hot mess by default. It's nothing like our awesome package managers on Linux that have everything in one place and ready to go. Of course you could just install and run those tools via WSL, but that isn't always an option. It turns out some awesome people have been hard at work rectifying this by making their own command line package managers/installers for Windows. The two main choices out there are Chocolatey and Scoop. Chocolatey has more software, but we are going to use Scoop because it is made for us Linux users that are stuck on Windows.</p>
+          <p>Scoop's focus is on open source nix tools like curl, wget, ssh, vim, and more. The home page describes it as a command line installer which is important. It's not really a package manager. It just has directions for how to install programs. It's pretty smart in the way it installs things. It uses a single directory for all the shims to keep PATH from getting cluttered. It also installs everything to user directory by default so you don't need admin or to click through UAC popups during install. You can even make your own buckets and rules to install your own software if you need to go that deep.</p>
+          <p>You can install scoop right inside powershell.</p>
+          <code class=code-block>
+            Set-ExecutionPolicy RemoteSigned -scope CurrentUser<br />
+            iwr -useb get.scoop.sh | iex<br />
+          </code>
+          <p>Once it is installed you can start installing your favorite stuff right away.</p>
+          <code class="code-block">scoop install wget</code>
+          <p>To see everything scoop can do just run help.</p>
+          <code class="code-block">scoop help</code>
+          <p>If you need something beyond the developer and nix tools there is an extras bucket you can add to install other software. The extra bucket has over 1000 other programs it can install, but first you'll have to add the bucket.</p>
+          <code class="code-block">scoop bucket add extras</code>
+          <p>Now you have easy access to a ton of other programs. Everything from the popular voxel editor MagicaVoxel, to the Brave browser, Godot game engine, and Sublime Text are available here along with a lot, lot more.</p>
+          <code class="code-block">scoop install steam</code>
+          <p>Updates are similarly easy.
+          <code class="code-block">scoop update <# Update package list #> <br>
+            scoop status <# Check what's out of date #> <br>
+            scoop update steam <# Update specific out of date package #>
+          </code>
+          <p>And that is my productivity tip for those of you trapped in Windows land this week. Stay tuned for more next week!</p>
+          <p>Until then.<br>James</p>
+        </div>
+      </article>
+    </div>
+  </body>
