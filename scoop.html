@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Project for Udacity Front End Developer Nanodegree">
@@ -8,26 +8,26 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <div class="top-spacer"></div>
+    <div class="header"></div>
     <div class="container">
       <nav class="top-nav">
         <ul>
           <li class="nav-li"><a class="nav-entry" href="index.html">Home</a></li>
-          <li class="nav-li"><a class="nav-entry" href="scoop.html">Latest Post</a></li>
+          <li class="nav-li"><a class="nav-entry" href="scoop.html">Learn Scoop</a></li>
         </ul>
       </nav>
       <article>
-        <header class="post-title">
+        <header class="article-header">
             <h1>Surviving Windows Application Management with Scoop</h1>
             <figure>
               <img class="responsive-pic" src="photos/coffee-scoop.jpg" alt="Scoop of coffee">
               <figcaption>Photo by Andrea Tummons on Unsplash</figcaption>
             </figure>
         </header>
-        <section class="post-meta">
+        <div class="entry-details">
           May 18, 2020 / Tech / James Teitsworth
-        </section>
-        <section class="post-content">
+        </div>
+        <div class="post-content">
           <p>
             Getting all of your favorite open source tools installed on Windows is a hot mess by default. It's nothing like our awesome package managers on Linux that have everything in one place and ready to go. Of course you could just install and run those tools via WSL, but that isn't always an option. It turns out some awesome people have been hard at work rectifying this by making their own command line package managers/installers for Windows. The two main choices out there are Chocolatey and Scoop. Chocolatey has more software, but we are going to use Scoop because it is made for us Linux users that are stuck on Windows.
           </p>
@@ -52,13 +52,13 @@
           </p>
           <code class="code-block">scoop install steam</code>
           <p>Updates are similarly easy.</p>
-          <code class="code-block">scoop update &lt;# Update package list #> <br>
-            scoop status &lt;# Check what's out of date #> <br>
-            scoop update steam &lt;# Update specific out of date package #>
+          <code class="code-block">scoop update <# Update package list #> <br>
+            scoop status <# Check what's out of date #> <br>
+            scoop update steam <# Update specific out of date package #>
           </code>
           <p>And that is my productivity tip for those of you trapped in Windows land this week. Stay tuned for more next week!</p>
           <p>Until then.<br>James</p>
-        </section>
+        </div>
       </article>
 
       <div class="social-bar">
@@ -79,7 +79,7 @@
       </div>
     </div>
 
-      <section class="about">
+      <article class="about">
         <div class=profile-photo>
           <div class="circle">
             <img src="photos/james.png" class="profile" alt="Photo of James">
@@ -95,7 +95,7 @@
             </p>
           </div>
         </div>
-      </section>
+      </article>
     </div>
   </body>
 </html>
