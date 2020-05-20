@@ -1,0 +1,12 @@
+/*blog roll*/
+
+.read-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 60px;
+  border-bottom: 1px solid var(--accent-grey);
+}

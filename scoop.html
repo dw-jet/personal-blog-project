@@ -5,7 +5,7 @@
     <meta name="description" content="Project for Udacity Front End Developer Nanodegree">
     <title>Surviving Windows Application Management with Scoop</title>
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
     <div class="header"></div>
@@ -24,8 +24,12 @@
           <span>May 18, 2020</span> / <span>Tech</span>
         </div>
         <div class="post-content">
-          <p>Getting all of your favorite open source tools installed on Windows is a hot mess by default. It's nothing like our awesome package managers on Linux that have everything in one place and ready to go. Of course you could just install and run those tools via WSL, but that isn't always an option. It turns out some awesome people have been hard at work rectifying this by making their own command line package managers/installers for Windows. The two main choices out there are Chocolatey and Scoop. Chocolatey has more software, but we are going to use Scoop because it is made for us Linux users that are stuck on Windows.</p>
-          <p>Scoop's focus is on open source nix tools like curl, wget, ssh, vim, and more. The home page describes it as a command line installer which is important. It's not really a package manager. It just has directions for how to install programs. It's pretty smart in the way it installs things. It uses a single directory for all the shims to keep PATH from getting cluttered. It also installs everything to user directory by default so you don't need admin or to click through UAC popups during install. You can even make your own buckets and rules to install your own software if you need to go that deep.</p>
+          <p>
+            Getting all of your favorite open source tools installed on Windows is a hot mess by default. It's nothing like our awesome package managers on Linux that have everything in one place and ready to go. Of course you could just install and run those tools via WSL, but that isn't always an option. It turns out some awesome people have been hard at work rectifying this by making their own command line package managers/installers for Windows. The two main choices out there are Chocolatey and Scoop. Chocolatey has more software, but we are going to use Scoop because it is made for us Linux users that are stuck on Windows.
+          </p>
+          <p>
+            Scoop's focus is on open source nix tools like curl, wget, ssh, vim, and more. The home page describes it as a command line installer which is important. It's not really a package manager. It just has directions for how to install programs. It's pretty smart in the way it installs things. It uses a single directory for all the shims to keep PATH from getting cluttered. It also installs everything to user directory by default so you don't need admin or to click through UAC popups during install. You can even make your own buckets and rules to install your own software if you need to go that deep.
+          </p>
           <p>You can install scoop right inside powershell.</p>
           <code class=code-block>
             Set-ExecutionPolicy RemoteSigned -scope CurrentUser<br />
@@ -35,11 +39,15 @@
           <code class="code-block">scoop install wget</code>
           <p>To see everything scoop can do just run help.</p>
           <code class="code-block">scoop help</code>
-          <p>If you need something beyond the developer and nix tools there is an extras bucket you can add to install other software. The extra bucket has over 1000 other programs it can install, but first you'll have to add the bucket.</p>
+          <p>
+            If you need something beyond the developer and nix tools there is an extras bucket you can add to install other software. The extra bucket has over 1000 other programs it can install, but first you'll have to add the bucket.
+          </p>
           <code class="code-block">scoop bucket add extras</code>
-          <p>Now you have easy access to a ton of other programs. Everything from the popular voxel editor MagicaVoxel, to the Brave browser, Godot game engine, and Sublime Text are available here along with a lot, lot more.</p>
+          <p>
+            Now you have easy access to a ton of other programs. Everything from the popular voxel editor MagicaVoxel, to the Brave browser, Godot game engine, and Sublime Text are available here along with a lot, lot more.
+          </p>
           <code class="code-block">scoop install steam</code>
-          <p>Updates are similarly easy.
+          <p>Updates are similarly easy.</p>
           <code class="code-block">scoop update <# Update package list #> <br>
             scoop status <# Check what's out of date #> <br>
             scoop update steam <# Update specific out of date package #>
@@ -48,16 +56,26 @@
           <p>Until then.<br>James</p>
         </div>
       </article>
-      <article class="about">
-        <header class="article-header">
-          <h2>About the Author</h2>
-        </header>
-        <div class="about">
-          <div class="circle">
-            <img src="james.png" class="profile" alt="Photo of James">
-          </div>
-            <p>James Teitsworth lives and works in the rural midwest as a Business Intelligence engineer for a casino and resort. In his spare time he likes to tinker around coding games, making websites, frequenting the local YMCA, and spending time with his family.</p>
-        </div>
-      </article>
     </div>
+    <article class="about">
+
+      <header class="about-heading">
+        <h2>About James</h2>
+      </header>
+
+      <div class="circle">
+        <img src="james.png" class="profile" alt="Photo of James">
+      </div>
+
+      <div class="about-description">
+        <p>
+          James Teitsworth lives and works in the rural midwest as a Business Intelligence Engineer for Catfish Bend Casino. In his spare time he likes to tinker around coding games, making websites, frequenting the local YMCA, and spending time with his family.
+        </p>
+      </div>
+    </article>
+
+    <footer>
+
+    </footer>
   </body>
+</html>

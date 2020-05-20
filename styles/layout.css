@@ -1,0 +1,11 @@
+/*layout*/
+
+.container {
+  width: 50%;
+  max-width: 750px;
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: 1fr;
+  margin: auto;
+  grid-row-gap: 40px;
+}

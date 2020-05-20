@@ -1,0 +1,41 @@
+/* About */
+
+.profile {
+  width: 100%;
+  height: 100%;
+}
+
+.circle {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 5px;
+  width: 150px;
+  height: 150px;
+  grid-area: pic;
+}
+
+.about {
+  width: 50%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 150px 4em 1fr;
+  grid-template-columns: 1fr;
+  grid-column-gap: 20px;
+  grid-template-areas: "pic" "head" "desc";
+}
+
+.about-heading {
+  grid-area: head;
+}
+
+.about-description {
+  grid-area: desc;
+}
+
+@media(min-width: 901px) {
+  .about {
+    grid-template-rows: 4em 1fr;
+    grid-template-columns: 150px 1fr;
+    grid-template-areas: "none head" "pic desc";
+  }
+}
