@@ -1,7 +1,8 @@
 @import "layout.css";
 @import "nav.css";
 @import "about.css";
-@import "blog-roll.css";
+@import "blog-card.css";
+@import "social.css";
 
 :root {
   --text-color: #333;
@@ -20,20 +21,19 @@ p {
   color: var(--text-color);
 }
 
-u {
+.underline {
   text-decoration: underline;
 }
 
-em {
+.italic {
   font-style: italic;
 }
 
-strong {
-  font-weight: bolder;
+.bold {
+  font-weight: bold;
 }
 
 blockquote {
-  margin: ;
 }
 
 h1,
@@ -58,6 +58,15 @@ hr {
   margin: 0;
 }
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  font: italic 14px/1em "Karla", san-serif;
+}
+
 .button {
   background-color: var(--accent-color);
   border-radius: 3px;
@@ -80,7 +89,21 @@ hr {
   font-size: 75%;
 }
 
+.small-heading {
+  font-size: 1.25em;
+}
 
+.header {
+  height: 60px;
+  border-bottom: 1px solid var(--accent-grey);
+}
 
+.responsive-pic {
+  width: 100%;
+}
 
-
+.home-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

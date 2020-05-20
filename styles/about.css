@@ -8,19 +8,22 @@
 .circle {
   border-radius: 50%;
   overflow: hidden;
-  margin-left: 5px;
-  width: 150px;
-  height: 150px;
+  width: 85px;
+  height: 85px;
+}
+
+.profile-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-area: pic;
 }
 
 .about {
-  width: 50%;
-  margin: auto;
   display: grid;
-  grid-template-rows: 150px 4em 1fr;
+  margin: auto;
+  grid-template-rows: 85px 2em 1fr;
   grid-template-columns: 1fr;
-  grid-column-gap: 20px;
   grid-template-areas: "pic" "head" "desc";
 }
 
@@ -34,8 +37,18 @@
 
 @media(min-width: 901px) {
   .about {
-    grid-template-rows: 4em 1fr;
-    grid-template-columns: 150px 1fr;
-    grid-template-areas: "none head" "pic desc";
+    grid-template-rows: 1fr;
+    grid-template-columns: 90px 1fr;
+    grid-template-areas: "pic info";
+    grid-column-gap: 10px;
+
+  }
+
+  .author-info {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2em 1fr;
+    grid-template-areas: "head" "desc";
   }
 }
