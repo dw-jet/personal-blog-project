@@ -1,13 +1,13 @@
 /*blog roll*/
 
-.article-header {
+.post-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 
-.entry-details {
+.post-meta {
   text-align: center;
   font-size: 16px;
   color: rgb(250, 181, 38);

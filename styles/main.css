@@ -34,6 +34,8 @@ p {
 }
 
 blockquote {
+  background: var(--accent-grey);
+  font-size: 24px;
 }
 
 h1,
@@ -93,7 +95,7 @@ figcaption {
   font-size: 1.25em;
 }
 
-.header {
+.top-spacer {
   height: 60px;
   border-bottom: 1px solid var(--accent-grey);
 }
