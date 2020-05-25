@@ -21,25 +21,37 @@ p {
   color: var(--text-color);
 }
 
-.underline {
-  text-decoration: underline;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.bold {
-  font-weight: bold;
-}
-
 blockquote {
+  border-left: 2px solid var(--accent-color);
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
 }
 
-h1,
-h2,
-h3 {
+blockquote:before {
+  color: #000;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: .25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  font-style: italic;
+  display: inline;
+}
+
+h1 {
   font: bold 34px/1.2em "Karla", san-serif;
+}
+
+h2 {
+  font: bold 26px/1.2em "Karla, san-serif;
+}
+
+h3 {
+  font: bold 22px/1.2em "Karla, san-serif;
 }
 
 ul {
@@ -87,10 +99,6 @@ figcaption {
 
 .small {
   font-size: 75%;
-}
-
-.small-heading {
-  font-size: 1.25em;
 }
 
 .header {

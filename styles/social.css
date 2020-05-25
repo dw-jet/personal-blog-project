@@ -1,8 +1,18 @@
 .social-bar {
   display: flex;
+  width: 80%;
   flex-direction: row;
   height: 32px;
   justify-content: space-between;
-  width: 80%;
   margin: auto;
+}
+
+.social-header {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.social-container {
+  width: 100%;
+  background-color: var(--accent-grey);
 }
